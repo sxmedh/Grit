@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --bg-primary: #050505;
+        --bg-card: #0e0e0e;
+        --bg-elevated: #161616;
+        --border: #1e1e1e;
+        --text-primary: #f0f0f0;
+        --text-secondary: #888888;
+        --text-muted: #444444;
+        --accent-green: #00fa7e;
+        --accent-blue: #00c8ff;
+        --accent-gold: #ffd700;
+        --accent-red: #ff2a5f;
+    }
+
+    body {
+        @apply bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased;
+        font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: 'Syne', system-ui, -apple-system, sans-serif;
+    }
+
+    .font-heading {
+        font-family: 'Syne', system-ui, -apple-system, sans-serif;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translate(-50%, 40px) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes microPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
